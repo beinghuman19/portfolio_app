@@ -4,7 +4,11 @@
   <b>Description:</b>
   <%= @portfolio.description %>
 </p>
-
+<p>
+<% @portfolio.investments.each do |x| %>
+     <%= investment.company.symbol %>
+      </p>
+<% end %>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
