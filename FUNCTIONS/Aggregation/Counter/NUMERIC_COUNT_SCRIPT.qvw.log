@@ -1,0 +1,40 @@
+04/10/2016 16:45:53:      Execution started.
+04/10/2016 16:45:53:      QlikView Version:10.00.9061.7
+04/10/2016 16:45:53: 0002  SET ThousandSep=','
+04/10/2016 16:45:53: 0003  SET DecimalSep='.'
+04/10/2016 16:45:53: 0004  SET MoneyThousandSep=','
+04/10/2016 16:45:53: 0005  SET MoneyDecimalSep='.'
+04/10/2016 16:45:53: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+04/10/2016 16:45:53: 0007  SET TimeFormat='hh:mm:ss'
+04/10/2016 16:45:53: 0008  SET DateFormat='DD/MM/YYYY'
+04/10/2016 16:45:53: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+04/10/2016 16:45:53: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+04/10/2016 16:45:53: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+04/10/2016 16:45:53: 0013  Temp:
+04/10/2016 16:45:53: 0014  LOAD * inline [
+04/10/2016 16:45:53: 0015  Customer|Product|OrderNumber|UnitSales|UnitPrice
+04/10/2016 16:45:53: 0016  Astrida|AA|1|4|16
+04/10/2016 16:45:53: 0017  Astrida|AA|7|10|15
+04/10/2016 16:45:53: 0018  Astrida|BB|4|9|9
+04/10/2016 16:45:53: 0019  Betacab|CC|6|5|10
+04/10/2016 16:45:53: 0020  Betacab|AA|5|2|20
+04/10/2016 16:45:53: 0021  Betacab|BB||| 25
+04/10/2016 16:45:53: 0022  Canutility|AA|||15
+04/10/2016 16:45:53: 0023  Canutility|CC| ||19
+04/10/2016 16:45:53: 0024  Divadip|CC|2|4|16
+04/10/2016 16:45:53: 0025  Divadip|DD|7|1|25
+04/10/2016 16:45:53: 0026  ] (delimiter is '|')
+04/10/2016 16:45:53:       	5 fields found: Customer, Product, OrderNumber, UnitSales, UnitPrice, 10 lines fetched
+04/10/2016 16:45:53: 0028  NumCount1:
+04/10/2016 16:45:53: 0029  LOAD Customer,NumericCount(OrderNumber) as NumericCountByCustomer
+04/10/2016 16:45:53: 0030  	
+04/10/2016 16:45:53: 0031  	Resident Temp 
+04/10/2016 16:45:53: 0032  Group By Customer
+04/10/2016 16:45:53:       	2 fields found: Customer, NumericCountByCustomer, 4 lines fetched
+04/10/2016 16:45:53: 0035  NumCount2:
+04/10/2016 16:45:53: 0036  LOAD NumericCount(OrderNumber) as TotalNumericCount Resident Temp
+04/10/2016 16:45:53:       	1 fields found: TotalNumericCount, 1 lines fetched
+04/10/2016 16:45:53: 0038  NumCount3:
+04/10/2016 16:45:53: 0039  LOAD NumericCount(distinct OrderNumber) as TotalNumericCountDistinct Resident Temp
+04/10/2016 16:45:53:       	1 fields found: TotalNumericCountDistinct, 1 lines fetched
+04/10/2016 16:45:53:      Execution finished.

@@ -1,0 +1,26 @@
+04/10/2016 13:35:51:      Execution started.
+04/10/2016 13:35:51:      QlikView Version:10.00.9061.7
+04/10/2016 13:35:51: 0002  SET ThousandSep=','
+04/10/2016 13:35:51: 0003  SET DecimalSep='.'
+04/10/2016 13:35:51: 0004  SET MoneyThousandSep=','
+04/10/2016 13:35:51: 0005  SET MoneyDecimalSep='.'
+04/10/2016 13:35:51: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+04/10/2016 13:35:51: 0007  SET TimeFormat='hh:mm:ss'
+04/10/2016 13:35:51: 0008  SET DateFormat='DD/MM/YYYY'
+04/10/2016 13:35:51: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+04/10/2016 13:35:51: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+04/10/2016 13:35:51: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+04/10/2016 13:35:51: 0013  ProductData:
+04/10/2016 13:35:51: 0014  LOAD * inline [
+04/10/2016 13:35:51: 0015  Customer|Product|UnitSales|UnitPrice
+04/10/2016 13:35:51: 0016  Astrida|AA|4|16
+04/10/2016 13:35:51: 0017  Astrida|AA|10|15
+04/10/2016 13:35:51: 0018  Astrida|BB|9|9
+04/10/2016 13:35:51: 0019  Betacab|BB|5|10
+04/10/2016 13:35:51: 0020  Betacab|CC|2|20
+04/10/2016 13:35:51: 0021  Betacab|DD||25
+04/10/2016 13:35:51: 0022  Canutility|AA|8|15
+04/10/2016 13:35:51: 0023  Canutility|CC||19
+04/10/2016 13:35:51: 0024  ] (delimiter is '|')
+04/10/2016 13:35:51:       	4 fields found: Customer, Product, UnitSales, UnitPrice, 8 lines fetched
+04/10/2016 13:35:51:      Execution finished.

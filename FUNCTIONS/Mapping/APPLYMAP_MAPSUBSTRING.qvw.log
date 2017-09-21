@@ -1,0 +1,63 @@
+05/10/2016 17:55:15:      Execution started.
+05/10/2016 17:55:15:      QlikView Version:10.00.9061.7
+05/10/2016 17:55:15: 0002  SET ThousandSep=','
+05/10/2016 17:55:15: 0003  SET DecimalSep='.'
+05/10/2016 17:55:15: 0004  SET MoneyThousandSep=','
+05/10/2016 17:55:15: 0005  SET MoneyDecimalSep='.'
+05/10/2016 17:55:15: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+05/10/2016 17:55:15: 0007  SET TimeFormat='hh:mm:ss'
+05/10/2016 17:55:15: 0008  SET DateFormat='DD/MM/YYYY'
+05/10/2016 17:55:15: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+05/10/2016 17:55:15: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+05/10/2016 17:55:15: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+05/10/2016 17:55:15: 0014  map1:
+05/10/2016 17:55:15: 0015  mapping LOAD * 
+05/10/2016 17:55:15: 0016  Inline [
+05/10/2016 17:55:15: 0017  CCode, Country
+05/10/2016 17:55:15: 0018  Sw, Sweden
+05/10/2016 17:55:15: 0019  Dk, Denmark
+05/10/2016 17:55:15: 0020  No, Norway
+05/10/2016 17:55:15: 0021  ] 
+05/10/2016 17:55:15:       	2 fields found: CCode, Country, 3 lines fetched
+05/10/2016 17:55:15: 0023  Salespersons:
+05/10/2016 17:55:15: 0024  LOAD *, 
+05/10/2016 17:55:15: 0025  ApplyMap('map1', CCode,'Rest of the world') As Country 
+05/10/2016 17:55:15: 0026  Inline [
+05/10/2016 17:55:15: 0027  CCode, Salesperson 
+05/10/2016 17:55:15: 0028  Sw, John
+05/10/2016 17:55:15: 0029  Sw, Mary
+05/10/2016 17:55:15: 0030  Sw, Per 
+05/10/2016 17:55:15: 0031  Dk, Preben
+05/10/2016 17:55:15: 0032  Dk, Olle
+05/10/2016 17:55:15: 0033  No, Ole 
+05/10/2016 17:55:15: 0034  Sf, Risttu] 
+05/10/2016 17:55:15:       	3 fields found: CCode, Salesperson, Country, 7 lines fetched
+05/10/2016 17:55:15: 0038  map2:
+05/10/2016 17:55:15: 0039  mapping LOAD * 
+05/10/2016 17:55:15: 0040  Inline [
+05/10/2016 17:55:15: 0041  AttCode, Attribute
+05/10/2016 17:55:15: 0042  R, Red
+05/10/2016 17:55:15: 0043  Y, Yellow
+05/10/2016 17:55:15: 0044  B, Blue
+05/10/2016 17:55:15: 0045  C, Cotton
+05/10/2016 17:55:15: 0046  P, Polyester
+05/10/2016 17:55:15: 0047  S, Small
+05/10/2016 17:55:15: 0048  M, Medium
+05/10/2016 17:55:15: 0049  L, Large
+05/10/2016 17:55:15: 0050  ] 
+05/10/2016 17:55:15:       	2 fields found: AttCode, Attribute, 8 lines fetched
+05/10/2016 17:55:15: 0052  Productmodels:
+05/10/2016 17:55:15: 0053  LOAD *,
+05/10/2016 17:55:15: 0054  MapSubString('map2', AttCode) as Description
+05/10/2016 17:55:15: 0055  Inline [
+05/10/2016 17:55:15: 0056  Model, AttCode
+05/10/2016 17:55:15: 0057  Twixie, R C S
+05/10/2016 17:55:15: 0058  Boomer, B P L
+05/10/2016 17:55:15: 0059  Raven, Y P M
+05/10/2016 17:55:15: 0060  Seedling, R C L
+05/10/2016 17:55:15: 0061  SeedlingPlus, R C L with hood
+05/10/2016 17:55:15: 0062  Younger, B C with patch
+05/10/2016 17:55:15: 0063  MultiStripe, R Y B C S/M/L 
+05/10/2016 17:55:15: 0064  ] 
+05/10/2016 17:55:15:       	3 fields found: Model, AttCode, Description, 7 lines fetched
+05/10/2016 17:55:15:      Execution finished.

@@ -1,0 +1,23 @@
+05/10/2016 17:43:56:      Execution started.
+05/10/2016 17:43:56:      QlikView Version:10.00.9061.7
+05/10/2016 17:43:56: 0002  SET ThousandSep=','
+05/10/2016 17:43:56: 0003  SET DecimalSep='.'
+05/10/2016 17:43:56: 0004  SET MoneyThousandSep=','
+05/10/2016 17:43:56: 0005  SET MoneyDecimalSep='.'
+05/10/2016 17:43:56: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+05/10/2016 17:43:56: 0007  SET TimeFormat='hh:mm:ss'
+05/10/2016 17:43:56: 0008  SET DateFormat='DD/MM/YYYY'
+05/10/2016 17:43:56: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+05/10/2016 17:43:56: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+05/10/2016 17:43:56: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+05/10/2016 17:43:56: 0013  A:
+05/10/2016 17:43:56: 0014  Load *, IsNum(Value), IsText(Value)
+05/10/2016 17:43:56: 0015  Inline [
+05/10/2016 17:43:56: 0016  Value
+05/10/2016 17:43:56: 0017  23
+05/10/2016 17:43:56: 0018  Green
+05/10/2016 17:43:56: 0019  Blue
+05/10/2016 17:43:56: 0020  12
+05/10/2016 17:43:56: 0021  33Red]
+05/10/2016 17:43:56:       	3 fields found: Value, IsNum(Value), IsText(Value), 5 lines fetched
+05/10/2016 17:43:56:      Execution finished.

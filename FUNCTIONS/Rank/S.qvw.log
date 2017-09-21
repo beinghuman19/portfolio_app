@@ -1,0 +1,107 @@
+18/10/2016 15:01:00:      Execution started.
+18/10/2016 15:01:00:      QlikView Version:10.00.9061.7
+18/10/2016 15:01:00: 0002  SET ThousandSep=','
+18/10/2016 15:01:00: 0003  SET DecimalSep='.'
+18/10/2016 15:01:00: 0004  SET MoneyThousandSep=','
+18/10/2016 15:01:00: 0005  SET MoneyDecimalSep='.'
+18/10/2016 15:01:00: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+18/10/2016 15:01:00: 0007  SET TimeFormat='hh:mm:ss'
+18/10/2016 15:01:00: 0008  SET DateFormat='DD/MM/YYYY'
+18/10/2016 15:01:00: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+18/10/2016 15:01:00: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+18/10/2016 15:01:00: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+18/10/2016 15:01:00: 0013  A:
+18/10/2016 15:01:00: 0014  LOAD * Inline
+18/10/2016 15:01:00: 0015  [
+18/10/2016 15:01:00: 0016  id
+18/10/2016 15:01:00: 0017  1988
+18/10/2016 15:01:00: 0018  1 
+18/10/2016 15:01:00: 0019  5  
+18/10/2016 15:01:00: 0020  6 
+18/10/2016 15:01:00: 0021  0
+18/10/2016 15:01:00: 0022  ]
+18/10/2016 15:01:00:       	1 fields found: id, 5 lines fetched
+18/10/2016 15:01:00: 0024  LOAD * Inline
+18/10/2016 15:01:00: 0025  [
+18/10/2016 15:01:00: 0026  id,name
+18/10/2016 15:01:00: 0027  DD,kk
+18/10/2016 15:01:00: 0028  FF,dd
+18/10/2016 15:01:00: 0029  JJ,rr
+18/10/2016 15:01:00: 0030  
+18/10/2016 15:01:00: 0031  ]
+18/10/2016 15:01:00:       	2 fields found: id, name, 3 lines fetched
+18/10/2016 15:01:00: 0034  add LOAD * Inline
+18/10/2016 15:01:00: 0035  [
+18/10/2016 15:01:00: 0036  id,name
+18/10/2016 15:01:00: 0037  3,dd
+18/10/2016 15:01:00: 0038  ]
+18/10/2016 15:01:00:       	2 fields found: id, name, 4 lines fetched
+18/10/2016 15:01:00: 0045  CD:
+18/10/2016 15:01:00: 0046  LOAD TITLE,
+18/10/2016 15:01:00: 0047      ARTIST,
+18/10/2016 15:01:00: 0048      COUNTRY,
+18/10/2016 15:01:00: 0049      COMPANY,
+18/10/2016 15:01:00: 0050      PRICE,
+18/10/2016 15:01:00: 0051      YEAR
+18/10/2016 15:01:00: 0052  FROM [..\..\cd_catalog.xml] (XmlSimple, Table is [CATALOG/CD])
+18/10/2016 15:01:00:       	6 fields found: TITLE, ARTIST, COUNTRY, COMPANY, PRICE, YEAR, 26 lines fetched
+18/10/2016 15:01:00: 0058  ProductData:
+18/10/2016 15:01:00: 0059  LOAD * inline [
+18/10/2016 15:01:00: 0060  Customer|Product|UnitSales|UnitPrice
+18/10/2016 15:01:00: 0061  Astrida|AA|4|16
+18/10/2016 15:01:00: 0062  Astrida|AA|10|15
+18/10/2016 15:01:00: 0063  Astrida|BB|9|9
+18/10/2016 15:01:00: 0064  Betacab|BB|5|10
+18/10/2016 15:01:00: 0065  Betacab|CC|2|20
+18/10/2016 15:01:00: 0066  Betacab|DD|25|25
+18/10/2016 15:01:00: 0067  Canutility|AA|8|15
+18/10/2016 15:01:00: 0068  Canutility|CC||19
+18/10/2016 15:01:00: 0069  ] (delimiter is '|')
+18/10/2016 15:01:00:       	4 fields found: Customer, Product, UnitSales, UnitPrice, 8 lines fetched
+18/10/2016 15:01:00: 0071  let Var1='avg(aggr(Sum(UnitSales*UnitPrice),Customer))'
+18/10/2016 15:01:00: 0073  SET vLiteral = 1 + 1
+18/10/2016 15:01:00: 0074  LET vSum = 1 + 1
+18/10/2016 15:01:00: 0084  CD:
+18/10/2016 15:01:00: 0085  LOAD TITLE,
+18/10/2016 15:01:00: 0086      ARTIST,
+18/10/2016 15:01:00: 0087      COUNTRY,
+18/10/2016 15:01:00: 0088      COMPANY,
+18/10/2016 15:01:00: 0089      PRICE,
+18/10/2016 15:01:00: 0090      YEAR
+18/10/2016 15:01:00: 0091  FROM C:\Users\sarfaraz.sheikh\Documents\cd_catalog.xml (XmlSimple, Table is [CATALOG/CD])
+18/10/2016 15:01:00:       	6 fields found: TITLE, ARTIST, COUNTRY, COMPANY, PRICE, YEAR, 52 lines fetched
+18/10/2016 15:01:00: 0097  Z:
+18/10/2016 15:01:00: 0098  Load * Inline [
+18/10/2016 15:01:00: 0099  PayDate
+18/10/2016 15:01:00: 0100  10-May-2014
+18/10/2016 15:01:00: 0101  21-Jun-2014
+18/10/2016 15:01:00: 0102  30-Jul-2014
+18/10/2016 15:01:00: 0103  22-Aug-2014
+18/10/2016 15:01:00: 0104  02-Sep-2014
+18/10/2016 15:01:00: 0105  27-Oct-2014
+18/10/2016 15:01:00: 0106  19-Nov-2014
+18/10/2016 15:01:00: 0107  20-Dec-2014
+18/10/2016 15:01:00: 0108  31-Jan-2015
+18/10/2016 15:01:00: 0109  11-Feb-2015
+18/10/2016 15:01:00: 0110  18-Mar-2015
+18/10/2016 15:01:00: 0111  25-Apr-2015
+18/10/2016 15:01:00: 0112  16-May-2015
+18/10/2016 15:01:00: 0113  ]
+
+18/10/2016 15:01:00:       	1 fields found: PayDate, 13 lines fetched
+18/10/2016 15:01:00: 0117  Y:
+18/10/2016 15:01:00: 0118  LOAD 
+18/10/2016 15:01:00: 0119  Date(ALT(Date#(PayDate,'DD/MM/YYYY'),Date(PayDate,'DD-MM-YYYY'),Date#( PayDate,'DD-MM-YYYY'),Date#( PayDate,'DD.MM.YYYY'),Date#( PayDate,'DD-MMM-YYYY'),),'DD-MM-YYYY') AS NEw_Date
+18/10/2016 15:01:00: 0120  Resident Z
+18/10/2016 15:01:00:       	1 fields found: NEw_Date, 13 lines fetched
+18/10/2016 15:01:00: 0123  X:
+18/10/2016 15:01:00: 0124  LOAD
+18/10/2016 15:01:00: 0125  date(MakeDate(Right(NEw_Date,4),Mid(NEw_Date,4,2),Left(NEw_Date,2)),'YYYYMM') as PayMonthYear
+18/10/2016 15:01:00: 0126  Resident Y 
+18/10/2016 15:01:00:       	1 fields found: PayMonthYear, 13 lines fetched
+18/10/2016 15:01:00: 0128  DROP Tables Y,Z
+18/10/2016 15:01:00: 0130  W:
+18/10/2016 15:01:00: 0131  LOAD PayMonthYear as PAY_MONTH_YEAR 
+18/10/2016 15:01:00: 0132  Resident X Order By PayMonthYear
+18/10/2016 15:01:00:       	1 fields found: PAY_MONTH_YEAR, 13 lines fetched
+18/10/2016 15:01:00:      Execution finished.

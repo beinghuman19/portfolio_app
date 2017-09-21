@@ -1,0 +1,39 @@
+04/10/2016 17:37:14:      Execution started.
+04/10/2016 17:37:14:      QlikView Version:10.00.9061.7
+04/10/2016 17:37:14: 0002  SET ThousandSep=','
+04/10/2016 17:37:14: 0003  SET DecimalSep='.'
+04/10/2016 17:37:14: 0004  SET MoneyThousandSep=','
+04/10/2016 17:37:14: 0005  SET MoneyDecimalSep='.'
+04/10/2016 17:37:14: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+04/10/2016 17:37:14: 0007  SET TimeFormat='hh:mm:ss'
+04/10/2016 17:37:14: 0008  SET DateFormat='DD/MM/YYYY'
+04/10/2016 17:37:14: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+04/10/2016 17:37:14: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+04/10/2016 17:37:14: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+04/10/2016 17:37:14: 0013  Directory
+04/10/2016 17:37:14: 0014  LOAD [Row ID], 
+04/10/2016 17:37:14: 0015       [Order ID], 
+04/10/2016 17:37:14: 0016       [Order Date], 
+04/10/2016 17:37:14: 0017       [Order Priority], 
+04/10/2016 17:37:14: 0018       [Order Quantity], 
+04/10/2016 17:37:14: 0019       Sales, 
+04/10/2016 17:37:14: 0020       Discount, 
+04/10/2016 17:37:14: 0021       [Ship Mode], 
+04/10/2016 17:37:14: 0022       Profit, 
+04/10/2016 17:37:14: 0023       [Unit Price], 
+04/10/2016 17:37:14: 0024       [Shipping Cost], 
+04/10/2016 17:37:14: 0025       [Customer Name], 
+04/10/2016 17:37:14: 0026       Province, 
+04/10/2016 17:37:14: 0027       Region, 
+04/10/2016 17:37:14: 0028       [Customer Segment], 
+04/10/2016 17:37:14: 0029       [Product Category], 
+04/10/2016 17:37:14: 0030       [Product Sub-Category], 
+04/10/2016 17:37:14: 0031       [Product Name], 
+04/10/2016 17:37:14: 0032       [Product Container], 
+04/10/2016 17:37:14: 0033       [Product Base Margin], 
+04/10/2016 17:37:14: 0034       [Ship Date]
+04/10/2016 17:37:14: 0035  FROM
+04/10/2016 17:37:14: 0036  [..\..\Sample - Superstore Sales (Excel).xls]
+04/10/2016 17:37:14: 0037  (biff, embedded labels, table is Orders$)
+04/10/2016 17:37:14:       	21 fields found: Row ID, Order ID, Order Date, Order Priority, Order Quantity, Sales, Discount, Ship Mode, Profit, Unit Price, Shipping Cost, Customer Name, Province, Region, Customer Segment, Product Category, Product Sub-Category, Product Name, Product Container, Product Base Margin, Ship Date, 8,400 lines fetched
+04/10/2016 17:37:14:      Execution finished.

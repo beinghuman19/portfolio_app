@@ -1,0 +1,23 @@
+06/10/2016 18:50:53:      Execution started.
+06/10/2016 18:50:53:      QlikView Version:10.00.9061.7
+06/10/2016 18:50:53: 0002  SET ThousandSep=','
+06/10/2016 18:50:53: 0003  SET DecimalSep='.'
+06/10/2016 18:50:53: 0004  SET MoneyThousandSep=','
+06/10/2016 18:50:53: 0005  SET MoneyDecimalSep='.'
+06/10/2016 18:50:53: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+06/10/2016 18:50:53: 0007  SET TimeFormat='hh:mm:ss'
+06/10/2016 18:50:53: 0008  SET DateFormat='DD/MM/YYYY'
+06/10/2016 18:50:53: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+06/10/2016 18:50:53: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+06/10/2016 18:50:53: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+06/10/2016 18:50:53: 0013  Directory
+06/10/2016 18:50:53: 0014  LOAD * INLINE [
+06/10/2016 18:50:53: 0015  ID, Type, Value
+06/10/2016 18:50:53: 0016  A, X, 10
+06/10/2016 18:50:53: 0017  B, X, 20
+06/10/2016 18:50:53: 0018  C, Y, 30
+06/10/2016 18:50:53: 0019  D, Y, 30
+06/10/2016 18:50:53: 0020  ]
+06/10/2016 18:50:53:       	3 fields found: ID, Type, Value, 4 lines fetched
+06/10/2016 18:50:53: 0022  EXIT Script
+06/10/2016 18:50:53:      Execution finished.

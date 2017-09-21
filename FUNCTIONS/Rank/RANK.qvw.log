@@ -1,0 +1,36 @@
+05/10/2016 18:06:47:      Execution started.
+05/10/2016 18:06:47:      QlikView Version:10.00.9061.7
+05/10/2016 18:06:47: 0002  SET ThousandSep=','
+05/10/2016 18:06:47: 0003  SET DecimalSep='.'
+05/10/2016 18:06:47: 0004  SET MoneyThousandSep=','
+05/10/2016 18:06:47: 0005  SET MoneyDecimalSep='.'
+05/10/2016 18:06:47: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+05/10/2016 18:06:47: 0007  SET TimeFormat='hh:mm:ss'
+05/10/2016 18:06:47: 0008  SET DateFormat='DD/MM/YYYY'
+05/10/2016 18:06:47: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+05/10/2016 18:06:47: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+05/10/2016 18:06:47: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+05/10/2016 18:06:47: 0013  ProductData:
+05/10/2016 18:06:47: 0014  Load * inline [
+05/10/2016 18:06:47: 0015  Customer|Product|UnitSales|UnitPrice
+05/10/2016 18:06:47: 0016  Astrida|AA|4|16
+05/10/2016 18:06:47: 0017  Astrida|AA|10|15
+05/10/2016 18:06:47: 0018  Astrida|BB|9|9
+05/10/2016 18:06:47: 0019  Betacab|BB|5|10
+05/10/2016 18:06:47: 0020  Betacab|CC|2|20
+05/10/2016 18:06:47: 0021  Betacab|DD|0|25
+05/10/2016 18:06:47: 0022  Canutility|AA|8|15
+05/10/2016 18:06:47: 0023  Canutility|CC|0|19
+05/10/2016 18:06:47: 0024  ] (delimiter is '|')
+05/10/2016 18:06:47:       	4 fields found: Customer, Product, UnitSales, UnitPrice, 8 lines fetched
+05/10/2016 18:06:47: 0026  Sales2013:
+05/10/2016 18:06:47: 0027  crosstable (Month, Sales) LOAD * inline [
+05/10/2016 18:06:47: 0028  Customer|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec
+05/10/2016 18:06:47: 0029  Astrida|46|60|70|13|78|20|45|65|78|12|78|22
+05/10/2016 18:06:47: 0030  Betacab|65|56|22|79|12|56|45|24|32|78|55|15
+05/10/2016 18:06:47: 0031  Canutility|77|68|34|91|24|68|57|36|44|90|67|27
+05/10/2016 18:06:47: 0032  Divadip|57|36|44|90|67|27|57|68|47|90|80|94
+05/10/2016 18:06:47: 0033  ] (delimiter is '|')
+05/10/2016 18:06:47:       	13 fields found: Customer, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, 	3 fields found: Customer, Month, Sales, 48 lines fetched
+05/10/2016 18:06:47:       4 lines fetched
+05/10/2016 18:06:47:      Execution finished.

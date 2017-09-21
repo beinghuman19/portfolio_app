@@ -1,0 +1,57 @@
+05/10/2016 17:25:36:      Execution started.
+05/10/2016 17:25:36:      QlikView Version:10.00.9061.7
+05/10/2016 17:25:36: 0002  SET ThousandSep=','
+05/10/2016 17:25:36: 0003  SET DecimalSep='.'
+05/10/2016 17:25:36: 0004  SET MoneyThousandSep=','
+05/10/2016 17:25:36: 0005  SET MoneyDecimalSep='.'
+05/10/2016 17:25:36: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+05/10/2016 17:25:36: 0007  SET TimeFormat='hh:mm:ss'
+05/10/2016 17:25:36: 0008  SET DateFormat='DD/MM/YYYY'
+05/10/2016 17:25:36: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+05/10/2016 17:25:36: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+05/10/2016 17:25:36: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+05/10/2016 17:25:36: 0014  A:
+05/10/2016 17:25:36: 0015  Load FileDir( ) as X from
+05/10/2016 17:25:36: 0016  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 1 lines fetched
+05/10/2016 17:25:36: 0018  B:
+05/10/2016 17:25:36: 0019  Load FileBaseName( ) as X from
+05/10/2016 17:25:36: 0020  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 2 lines fetched
+05/10/2016 17:25:36: 0022  C:
+05/10/2016 17:25:36: 0023  Load FileExtension( ) as X from
+05/10/2016 17:25:36: 0024  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 3 lines fetched
+05/10/2016 17:25:36: 0026  D:
+05/10/2016 17:25:36: 0027  Load FileName( ) as X from
+05/10/2016 17:25:36: 0028  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 4 lines fetched
+05/10/2016 17:25:36: 0030  E:
+05/10/2016 17:25:36: 0031  Load FilePath( ) as X from
+05/10/2016 17:25:36: 0032  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 5 lines fetched
+05/10/2016 17:25:36: 0034  F:
+05/10/2016 17:25:36: 0035  Load FileSize( ) as X from
+05/10/2016 17:25:36: 0036  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 6 lines fetched
+05/10/2016 17:25:36: 0038  G:
+05/10/2016 17:25:36: 0039  Load FileTime( ) as X from
+05/10/2016 17:25:36: 0040  C:\Users\sarfaraz.sheikh\Documents\setanalysis.xlsx
+05/10/2016 17:25:36:       	1 fields found: X, 7 lines fetched
+05/10/2016 17:25:36: 0042  H:
+05/10/2016 17:25:36: 0043  
+05/10/2016 17:25:36: 0044  LOAD DATE(QvdCreateTime('C:\Users\sarfaraz.sheikh\Downloads\US_International.qvd'),'DD-MM-YYYY') as X AutoGenerate 1
+05/10/2016 17:25:36:       	1 fields found: X, 8 lines fetched
+05/10/2016 17:25:36: 0046  I:
+05/10/2016 17:25:36: 0047  LOAD QvdFieldName('C:\Users\sarfaraz.sheikh\Downloads\US_International.qvd',5) as X AutoGenerate 1
+05/10/2016 17:25:36:       	1 fields found: X, 9 lines fetched
+05/10/2016 17:25:36: 0049  J:
+05/10/2016 17:25:36: 0050  LOAD QvdNoOfFields('C:\Users\sarfaraz.sheikh\Downloads\US_International.qvd') as X AutoGenerate 1
+05/10/2016 17:25:36:       	1 fields found: X, 10 lines fetched
+05/10/2016 17:25:36: 0052  K:
+05/10/2016 17:25:36: 0053  LOAD QvdNoOfRecords('C:\Users\sarfaraz.sheikh\Downloads\US_International.qvd') as X AutoGenerate 1
+05/10/2016 17:25:36:       	1 fields found: X, 11 lines fetched
+05/10/2016 17:25:36: 0055  L:
+05/10/2016 17:25:36: 0056  LOAD QvdTableName('C:\Users\sarfaraz.sheikh\Downloads\US_International.qvd') as X AutoGenerate 1
+05/10/2016 17:25:36:       	1 fields found: X, 12 lines fetched
+05/10/2016 17:25:36:      Execution finished.

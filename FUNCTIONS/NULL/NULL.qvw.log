@@ -1,0 +1,24 @@
+05/10/2016 18:02:11:      Execution started.
+05/10/2016 18:02:11:      QlikView Version:10.00.9061.7
+05/10/2016 18:02:11: 0002  SET ThousandSep=','
+05/10/2016 18:02:11: 0003  SET DecimalSep='.'
+05/10/2016 18:02:11: 0004  SET MoneyThousandSep=','
+05/10/2016 18:02:11: 0005  SET MoneyDecimalSep='.'
+05/10/2016 18:02:11: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+05/10/2016 18:02:11: 0007  SET TimeFormat='hh:mm:ss'
+05/10/2016 18:02:11: 0008  SET DateFormat='DD/MM/YYYY'
+05/10/2016 18:02:11: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+05/10/2016 18:02:11: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+05/10/2016 18:02:11: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+05/10/2016 18:02:11: 0014  LOAD *,
+05/10/2016 18:02:11: 0015  If(IsNull(ValueNullConv), 'T', 'F') as IsItNull
+05/10/2016 18:02:11: 0017  LOAD *,
+05/10/2016 18:02:11: 0018  If(len(trim(Value))= 0 or Value='NULL' or Value='-', Null(), Value ) as ValueNullConv
+05/10/2016 18:02:11: 0020  LOAD * Inline
+05/10/2016 18:02:11: 0021  [ID, Value
+05/10/2016 18:02:11: 0022  0,
+05/10/2016 18:02:11: 0023  1,NULL
+05/10/2016 18:02:11: 0024  2,-
+05/10/2016 18:02:11: 0025  3,Value]
+05/10/2016 18:02:11:       	4 fields found: ID, Value, ValueNullConv, IsItNull, 4 lines fetched
+05/10/2016 18:02:11:      Execution finished.

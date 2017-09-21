@@ -1,0 +1,188 @@
+06/10/2016 15:12:38:      Execution started.
+06/10/2016 15:12:38:      QlikView Version:10.00.9061.7
+06/10/2016 15:12:38: 0002  SET ThousandSep=','
+06/10/2016 15:12:38: 0003  SET DecimalSep='.'
+06/10/2016 15:12:38: 0004  SET MoneyThousandSep=','
+06/10/2016 15:12:38: 0005  SET MoneyDecimalSep='.'
+06/10/2016 15:12:38: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+06/10/2016 15:12:38: 0007  SET TimeFormat='hh:mm:ss'
+06/10/2016 15:12:38: 0008  SET DateFormat='DD/MM/YYYY'
+06/10/2016 15:12:38: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+06/10/2016 15:12:38: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+06/10/2016 15:12:38: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+06/10/2016 15:12:38: 0013  A:
+06/10/2016 15:12:38: 0014  LOAD * Inline
+06/10/2016 15:12:38: 0015  [
+06/10/2016 15:12:38: 0016  NAME
+06/10/2016 15:12:38: 0017  returns the string
+06/10/2016 15:12:38: 0018   uppercase letters
+06/10/2016 15:12:38: 0019  ]
+06/10/2016 15:12:38:       	1 fields found: NAME, 2 lines fetched
+06/10/2016 15:12:38: 0021  B:
+06/10/2016 15:12:38: 0022  LOAD * Inline
+06/10/2016 15:12:38: 0023  [
+06/10/2016 15:12:38: 0024  Date
+06/10/2016 15:12:38: 0025  1997-07-14
+06/10/2016 15:12:38: 0026  ]
+06/10/2016 15:12:38:       	1 fields found: Date, 1 lines fetched
+06/10/2016 15:12:38: 0028  C:
+06/10/2016 15:12:38: 0029  LOAD * Inline
+06/10/2016 15:12:38: 0030  [
+06/10/2016 15:12:38: 0031  rating
+06/10/2016 15:12:38: 0032  5
+06/10/2016 15:12:38: 0033  7
+06/10/2016 15:12:38: 0034  4
+06/10/2016 15:12:38: 0035  9
+06/10/2016 15:12:38: 0036  ]
+06/10/2016 15:12:38:       	1 fields found: rating, 4 lines fetched
+06/10/2016 15:12:38: 0038  CAPITALIZE:
+06/10/2016 15:12:38: 0039  LOAD *,
+06/10/2016 15:12:38: 0040  	Capitalize(NAME)
+06/10/2016 15:12:38: 0041  	RESIDENT A
+06/10/2016 15:12:38:       	2 fields found: NAME, Capitalize(NAME), 2 lines fetched
+06/10/2016 15:12:38: 0044  CHR:
+06/10/2016 15:12:38: 0045  LOAD
+06/10/2016 15:12:38: 0046  Chr(65) AS CHAR
+06/10/2016 15:12:38: 0047  AutoGenerate 1
+06/10/2016 15:12:38:       	1 fields found: CHAR, 1 lines fetched
+06/10/2016 15:12:38: 0049  EVALUATE:
+06/10/2016 15:12:38: 0050  LOAD
+06/10/2016 15:12:38: 0051  	Evaluate ( 5 * 8 ) AS EVALUATE
+06/10/2016 15:12:38: 0052  AutoGenerate 1
+06/10/2016 15:12:38:       	1 fields found: EVALUATE, 1 lines fetched
+06/10/2016 15:12:38: 0054  FINDONEOF:
+06/10/2016 15:12:38: 0055  LOAD
+06/10/2016 15:12:38: 0056  	FindOneOf( 'my example text string', 'et%s'),
+06/10/2016 15:12:38: 0057  	FindOneOf( 'my example text string', 'et%s', 3),
+06/10/2016 15:12:38: 0058  	FindOneOf( 'my example text string', '¤%&')
+06/10/2016 15:12:38: 0059  AutoGenerate 1
+06/10/2016 15:12:38:       	3 fields found: FindOneOf( 'my example text string', 'et%s'), FindOneOf( 'my example text string', 'et%s', 3), FindOneOf( 'my example text string', '¤%&'), 1 lines fetched
+06/10/2016 15:12:38: 0061  HASH:
+06/10/2016 15:12:38: 0062  LOAD
+06/10/2016 15:12:38: 0063  	Hash128 ( 'abc', 'xyz', '123' ),
+06/10/2016 15:12:38: 0064  	Hash160 ( 'abc', 'xyz', '123' ),
+06/10/2016 15:12:38: 0065  	Hash256( 'abc', 'xyz', '123' )
+06/10/2016 15:12:38: 0066  AutoGenerate 1
+06/10/2016 15:12:38:       	3 fields found: Hash128 ( 'abc', 'xyz', '123' ), Hash160 ( 'abc', 'xyz', '123' ), Hash256( 'abc', 'xyz', '123' ), 1 lines fetched
+06/10/2016 15:12:38: 0068  INDEX:
+06/10/2016 15:12:38: 0069  LOAD
+06/10/2016 15:12:38: 0070  	Index( 'abcdefg', 'cd' ),
+06/10/2016 15:12:38: 0071  	Index( 'abcdabcd', 'b', 2),
+06/10/2016 15:12:38: 0072  	Index( 'abcdabcd', 'b',-2)	
+06/10/2016 15:12:38: 0073  AutoGenerate 1
+06/10/2016 15:12:38:       	3 fields found: Index( 'abcdefg', 'cd' ), Index( 'abcdabcd', 'b', 2), Index( 'abcdabcd', 'b',-2), 1 lines fetched
+06/10/2016 15:12:38: 0075  INDEX1:
+06/10/2016 15:12:38: 0076  LOAD
+06/10/2016 15:12:38: 0077  Left( Date, Index( Date,'-') -1 ) ,
+06/10/2016 15:12:38: 0078  Mid( Date, Index( Date, '-', 2 ) -2, 2 ),
+06/10/2016 15:12:38: 0079  
+06/10/2016 15:12:38: 0080  Right(Date,(fabs(Index( Date, '-', 2)-len(Date))))
+06/10/2016 15:12:38: 0081  
+06/10/2016 15:12:38: 0082  Resident B
+06/10/2016 15:12:38:       	3 fields found: Left( Date, Index( Date,'-') -1 ), Mid( Date, Index( Date, '-', 2 ) -2, 2 ), Right(Date,(fabs(Index( Date, '-', 2)-len(Date)))), 1 lines fetched
+06/10/2016 15:12:38: 0085  KEEPCHAR:
+06/10/2016 15:12:38: 0086  LOAD
+06/10/2016 15:12:38: 0087  KeepChar ( 'a1b2c3','123' ),
+06/10/2016 15:12:38: 0088  KeepChar ( 'a1b2c3','1234' ),
+06/10/2016 15:12:38: 0089  KeepChar ( 'a1b22c3','1234' ),
+06/10/2016 15:12:38: 0090  KeepChar ( 'a1b2c3','312' )
+06/10/2016 15:12:38: 0091  AutoGenerate 1
+06/10/2016 15:12:38:       	4 fields found: KeepChar ( 'a1b2c3','123' ), KeepChar ( 'a1b2c3','1234' ), KeepChar ( 'a1b22c3','1234' ), KeepChar ( 'a1b2c3','312' ), 1 lines fetched
+06/10/2016 15:12:38: 0093  PURGECHAR:
+06/10/2016 15:12:38: 0094  LOAD
+06/10/2016 15:12:38: 0095  PurgeChar ( 'a1b2c3','123' ),
+06/10/2016 15:12:38: 0096  PurgeChar ( 'a1b2c3','312' )
+06/10/2016 15:12:38: 0097  AutoGenerate 1
+06/10/2016 15:12:38:       	2 fields found: PurgeChar ( 'a1b2c3','123' ), PurgeChar ( 'a1b2c3','312' ), 1 lines fetched
+06/10/2016 15:12:38: 0099  LEFT_RIGHT_MID:
+06/10/2016 15:12:38: 0100  LOAD
+06/10/2016 15:12:38: 0101  Left('abcdef', 3),
+06/10/2016 15:12:38: 0102  Right('abcdef', 3),
+06/10/2016 15:12:38: 0103  Mid('abcdef',3 ),
+06/10/2016 15:12:38: 0104  Mid('abcdef',3, 2 )
+06/10/2016 15:12:38: 0105  AutoGenerate 1
+06/10/2016 15:12:38:       	4 fields found: Left('abcdef', 3), Right('abcdef', 3), Mid('abcdef',3 ), Mid('abcdef',3, 2 ), 1 lines fetched
+06/10/2016 15:12:38: 0107  LOWER_UPPER:
+06/10/2016 15:12:38: 0108  LOAD
+06/10/2016 15:12:38: 0109  Lower('abcD'),
+06/10/2016 15:12:38: 0110  Upper('abcD')
+06/10/2016 15:12:38: 0111  AutoGenerate 1
+06/10/2016 15:12:38:       	2 fields found: Lower('abcD'), Upper('abcD'), 1 lines fetched
+06/10/2016 15:12:38: 0113  TRIM:
+06/10/2016 15:12:38: 0114  LOAD
+06/10/2016 15:12:38: 0115  Trim( ' abc' ),
+06/10/2016 15:12:38: 0116  Trim( 'abc ' ),
+06/10/2016 15:12:38: 0117  Trim( ' abc ' ),
+06/10/2016 15:12:38: 0118  LTrim( ' abc' ),
+06/10/2016 15:12:38: 0119  LTrim( 'abc ' ),
+06/10/2016 15:12:38: 0120  RTrim( ' abc' ),
+06/10/2016 15:12:38: 0121  RTrim( 'abc ' )
+06/10/2016 15:12:38: 0122  AutoGenerate 1
+06/10/2016 15:12:38:       	7 fields found: Trim( ' abc' ), Trim( 'abc ' ), Trim( ' abc ' ), LTrim( ' abc' ), LTrim( 'abc ' ), RTrim( ' abc' ), RTrim( 'abc ' ), 1 lines fetched
+06/10/2016 15:12:38: 0124  ORD:
+06/10/2016 15:12:38: 0125  LOAD 
+06/10/2016 15:12:38: 0126  Ord('A'),
+06/10/2016 15:12:38: 0127  Ord('Ab')
+06/10/2016 15:12:38: 0128  AutoGenerate 1
+06/10/2016 15:12:38:       	2 fields found: Ord('A'), Ord('Ab'), 1 lines fetched
+06/10/2016 15:12:38: 0130  REPLACE:
+06/10/2016 15:12:38: 0131  LOAD 
+06/10/2016 15:12:38: 0132  Replace('abccde','cc','xyz')
+06/10/2016 15:12:38: 0133  AutoGenerate 1
+06/10/2016 15:12:38:       	1 fields found: Replace('abccde','cc','xyz'), 1 lines fetched
+06/10/2016 15:12:38: 0137  TEXTBETWEEN_SUBSTRINGCOUNT:
+06/10/2016 15:12:38: 0138  LOAD
+06/10/2016 15:12:38: 0139  TextBetween('<abc>', '<', '>'),
+06/10/2016 15:12:38: 0140  TextBetween('<abc><de>', '<', '>',2),
+06/10/2016 15:12:38: 0141  SubStringCount ( 'abcdefgcdxyz', 'cd' ),
+06/10/2016 15:12:38: 0142  SubStringCount ( 'abcdefgcdxyz', 'dc' )
+06/10/2016 15:12:38: 0143  AutoGenerate 1
+06/10/2016 15:12:38:       	4 fields found: TextBetween('<abc>', '<', '>'), TextBetween('<abc><de>', '<', '>',2), SubStringCount ( 'abcdefgcdxyz', 'cd' ), SubStringCount ( 'abcdefgcdxyz', 'dc' ), 1 lines fetched
+06/10/2016 15:12:38: 0145  SUBFIELD:
+06/10/2016 15:12:38: 0146  LOAD
+06/10/2016 15:12:38: 0147  SubField('abc;cde;efg', ';', 2),
+06/10/2016 15:12:38: 0148  SubField('', ';', 1),
+06/10/2016 15:12:38: 0149  SubField(';', ';', 1)
+06/10/2016 15:12:38: 0150  AutoGenerate 1
+06/10/2016 15:12:38:       	3 fields found: SubField('abc;cde;efg', ';', 2), SubField('', ';', 1), SubField(';', ';', 1), 1 lines fetched
+06/10/2016 15:12:38: 0153  FullName:
+06/10/2016 15:12:38: 0154  LOAD * inline [
+06/10/2016 15:12:38: 0155  Name
+06/10/2016 15:12:38: 0156  'Dave Owen'
+06/10/2016 15:12:38: 0157  'Joe Tem'
+06/10/2016 15:12:38: 0158  ]
+06/10/2016 15:12:38:       	1 fields found: Name, 2 lines fetched
+06/10/2016 15:12:38: 0160  SepNames:
+06/10/2016 15:12:38: 0161  Load Name,
+06/10/2016 15:12:38: 0162  SubField(Name, ' ',1) as FirstName,
+06/10/2016 15:12:38: 0163  SubField(Name, ' ',-1) as Surname
+06/10/2016 15:12:38: 0164  Resident FullName
+06/10/2016 15:12:38:       	3 fields found: Name, FirstName, Surname, 2 lines fetched
+06/10/2016 15:12:38: 0165  Drop Table FullName
+06/10/2016 15:12:38: 0168  SEP1:
+06/10/2016 15:12:38: 0169  LOAD DISTINCT
+06/10/2016 15:12:38: 0170  Player,
+06/10/2016 15:12:38: 0171  SubField(Project,',') as Project
+06/10/2016 15:12:38: 0173  Load * inline [
+06/10/2016 15:12:38: 0174  Player|Project
+06/10/2016 15:12:38: 0175  Neil|Music,OST
+06/10/2016 15:12:38: 0176  Jo|Music
+06/10/2016 15:12:38: 0177  Mike|Music,OST,Video
+06/10/2016 15:12:38: 0178  ] (delimiter is '|')
+06/10/2016 15:12:38:       	2 fields found: Player, Project, 6 lines fetched
+06/10/2016 15:12:38: 0181  SEP2:
+06/10/2016 15:12:38: 0182  LOAD DISTINCT
+06/10/2016 15:12:38: 0183  Instrument,
+06/10/2016 15:12:38: 0184  SubField(Player,',') as Player,
+06/10/2016 15:12:38: 0185  SubField(Project,',') as Project
+06/10/2016 15:12:38: 0187  Load * inline [
+06/10/2016 15:12:38: 0188  Instrument|Player|Project
+06/10/2016 15:12:38: 0189  Guitar|Neil,Mike|Music,Video
+06/10/2016 15:12:38: 0190  Guitar|Neil|Music,OST
+06/10/2016 15:12:38: 0191  Synth|Neil,Jen|Music,Video,OST
+06/10/2016 15:12:38: 0192  Synth|Jo|Music
+06/10/2016 15:12:38: 0193  Guitar|Neil,Mike|Music,OST
+06/10/2016 15:12:38: 0194  ] (delimiter is '|')
+06/10/2016 15:12:38:       	3 fields found: Instrument, Player, Project, 13 lines fetched
+06/10/2016 15:12:38:       $Syn 1 = Player+Project
+06/10/2016 15:12:38:      Execution finished.

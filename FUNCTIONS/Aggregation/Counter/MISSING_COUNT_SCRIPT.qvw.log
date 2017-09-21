@@ -1,0 +1,37 @@
+04/10/2016 15:20:34:      Execution started.
+04/10/2016 15:20:34:      QlikView Version:10.00.9061.7
+04/10/2016 15:20:34: 0002  SET ThousandSep=','
+04/10/2016 15:20:34: 0003  SET DecimalSep='.'
+04/10/2016 15:20:34: 0004  SET MoneyThousandSep=','
+04/10/2016 15:20:34: 0005  SET MoneyDecimalSep='.'
+04/10/2016 15:20:34: 0006  SET MoneyFormat='? #,##0.00;? -#,##0.00'
+04/10/2016 15:20:34: 0007  SET TimeFormat='hh:mm:ss'
+04/10/2016 15:20:34: 0008  SET DateFormat='DD/MM/YYYY'
+04/10/2016 15:20:34: 0009  SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]'
+04/10/2016 15:20:34: 0010  SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+04/10/2016 15:20:34: 0011  SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+04/10/2016 15:20:34: 0013  Temp:
+04/10/2016 15:20:34: 0014  LOAD * inline [
+04/10/2016 15:20:34: 0015  Customer|Product|OrderNumber|UnitSales|UnitPrice
+04/10/2016 15:20:34: 0016  Astrida|AA|1|4|16
+04/10/2016 15:20:34: 0017  Astrida|AA|7|10|15
+04/10/2016 15:20:34: 0018  Astrida|BB|4|9|9
+04/10/2016 15:20:34: 0019  Betacab|CC|6|5|10
+04/10/2016 15:20:34: 0020  Betacab|AA|5|2|20
+04/10/2016 15:20:34: 0021  Betacab|BB||| 25
+04/10/2016 15:20:34: 0022  Canutility|AA|||15
+04/10/2016 15:20:34: 0023  Canutility|CC| ||19
+04/10/2016 15:20:34: 0024  Divadip|CC|2|4|16
+04/10/2016 15:20:34: 0025  Divadip|DD|3|1|25
+04/10/2016 15:20:34: 0026  ] (delimiter is '|')
+04/10/2016 15:20:34:       	5 fields found: Customer, Product, OrderNumber, UnitSales, UnitPrice, 10 lines fetched
+04/10/2016 15:20:34: 0027  MissCount1:
+04/10/2016 15:20:34: 0028  LOAD Customer,MissingCount(OrderNumber) as MissingOrdersByCustomer Resident Temp Group By Customer
+04/10/2016 15:20:34:       	2 fields found: Customer, MissingOrdersByCustomer, 4 lines fetched
+04/10/2016 15:20:34: 0029  MissCount2:
+04/10/2016 15:20:34: 0030  Load MissingCount(OrderNumber) as TotalMissingCount Resident Temp
+04/10/2016 15:20:34:       	1 fields found: TotalMissingCount, 1 lines fetched
+04/10/2016 15:20:34: 0033  MissCount3:
+04/10/2016 15:20:34: 0034  LOAD MissingCount(distinct OrderNumber) as TotalMissingCountDistinct Resident Temp
+04/10/2016 15:20:34:       	1 fields found: TotalMissingCountDistinct, 1 lines fetched
+04/10/2016 15:20:34:      Execution finished.
